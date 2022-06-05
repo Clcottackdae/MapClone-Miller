@@ -262,18 +262,17 @@ extension BottomSheetView {
                                   subHeadline: "아셈타워에서 가는 경로")
                 }
             }
-            .onAppear {
-                UITableView.appearance().isScrollEnabled = false
-                UITableView.appearance().contentInset.top = -35 // 이 방법말고는,,?
-                
-            }
+           
             .listStyle(.insetGrouped)
             .cornerRadius(10)
             .environment(\.defaultMinListRowHeight, 70)
             .frame(height : 210)
-            
-            
-            
+            .onAppear {
+                UITableView.appearance().contentInset.top = -35 // 이 방법말고는,,?
+                
+            }
+            .disabled(true)
+            .padding(.bottom)
             
         }
     }
