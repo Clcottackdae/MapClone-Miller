@@ -10,15 +10,7 @@ import MapKit
 
 struct MapView: View {
     
-    @StateObject private var viewModel = MapViewModel()
    
-    var body: some View {
-        Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
-            .ignoresSafeArea()
-            .onAppear {
-                viewModel.checkLocationManagerIsEnabled()
-            }
-    }
 }
 
 struct MapView_Previews: PreviewProvider {
